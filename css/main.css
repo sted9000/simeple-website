@@ -1,0 +1,201 @@
+/**********
+GENERAL
+**********/
+
+#wrapper { /* <#> are used for html id tags */
+	max-width: 940px; /* maximum width for this element */
+	margin: 0 auto; /* space outside the order */
+	padding: 0 5%; /* space between the content and the border */
+}
+
+a { 
+	text-decoration: none; /* Removes the underline from the hyperlinked text */
+}
+
+img {
+	max-width: 100%; /* This is useful for scaling to browser (think mobile) */
+	max-height: 100px;
+	}
+
+
+
+/**********
+HEADING
+**********/
+
+header {
+	float: left; /* float is used to position on page (left, right, none, inherit) */
+	margin: 0 0 30px 0; /* When four values: Top, right, bottom, left (clockwise) */
+	padding: 5px 0 0 0;
+	width: 100%; /* This is no longer implicit because the header is floated */
+}
+
+#logo {
+	text-align: center; /* Aligns the text (left, right, center, justify, initial, inherit) */
+	margin: 0;
+}
+
+h1 {
+	font-family: 'Poor Story', cursive; /* Google font declared in the html. Cursive is the back-up */
+	margin: 15px 0; /* When two values: topbottom, leftright */
+	font-size: 1.75em; /* em is a relative measure vs default */
+	font-weight: normal; /* Un-boldens text */
+	line-height: 0.8em; /* Specifies the height of a line */
+}
+
+h2 {
+	font-size: 0.75em;
+	margin: -5px 0 0; /* Top, sides, bottom */
+	font-weight: normal;
+}
+
+h3 {
+	margin: 0 0 1em 0;
+}
+
+
+
+/**********
+NAVIGATION
+**********/
+
+nav {
+	text-align: center;
+	font-family: 'Poor Story', cursive;
+	padding: 10px 0;
+	margin: 20px 0 0;
+
+}
+
+nav ul { /* Meaning un-ordered lists that are inside a <nav> tag */
+	list-style: none; /* Removes bullets from lists */ 
+	margin: 0 10px; 
+	padding: 0;
+}
+
+nav li {
+	display: inline-block; /* Makes a grid of boxes that fills the browser width and wroaps nicely. */
+}
+
+nav a {
+	padding: 15px 10px;
+}
+
+
+/**********
+FOOTER
+**********/
+
+footer {
+	font-size: 0.75em;
+	text-align: center;
+	clear: both; /* Clears the floating of this element */
+	padding-top: 50px;
+	color: #ccc; /* Gray */
+}
+
+
+/**********
+PAGE: PORTFOLIO
+**********/
+
+#gallery {
+	margin: 0;
+	padding: 0;
+	list-style: none; /* Removes bullets from lists */
+}
+
+#gallery li {
+	float: left; /* Anchors of left side of element */
+	width: 45%; /* Sets width */
+	margin: 2.5%; /* 45 * 2 = 90 and then we have four margins at 2.5% to equal 100 */
+	background-color: #f5f5f5;
+	color: #bdc3c7;
+}
+
+#gallery li a p { /* This notative means: the <p> tag nested in an <a> tag, nested in a <li> list item, inside the gallery id tag. */
+	margin: 0;
+	padding: 5%;
+	font-size: 0.75em;
+	color: #bdc3c7;
+}
+
+
+/**********
+PAGE: ABOUT
+**********/
+
+.profile-photo {
+	display: block; /* Allows us to use auto margins (see two lines below), default would be inline */
+	max-width: 150px;
+	margin: 0 auto 30px; 
+	border-radius: 100%; /* allows you to round to border of an element (100% is just a circle) */
+}
+
+
+
+/**********
+PAGE: CONTACT
+**********/
+
+.contact-info {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	font-size: 0.9em;
+}
+
+.contact-info a {
+	display: block; /* gives anchor elements a space so the images are not on top of them */
+	min-height: 20px; /* images are 20px tall so we need at least this amount */
+	background-repeat: no-repeat; /* by default background images always repeat */
+	background-size: 20px 20px;
+	padding: 0 0 0 30px;
+	margin: 0 0 10px;
+}
+
+.contact-info li.phone a {
+	background-image: url('../img/phone.png') /* ../ is used to jump up a directory level */
+}
+
+.contact-info li.mail a {
+	background-image: url('../img/mail.png')
+}
+
+.contact-info li.twitter a {
+	background-image: url('../img/twitter.png')
+}
+/**********
+COLORS
+**********/
+
+body {
+	background-color: #fff;
+	color: #999;
+}
+
+header {
+	background: #6ab47b;
+	border-color: #599a68;
+}
+
+nav {
+	background: #599a68;
+}
+
+h1, h2 {
+	color: #fff;
+}
+
+a {
+	color: #6ab47b;
+}
+
+nav a, nav a:visited { /* Overrides the color change for links that have been previously visited */
+	color: #fff;
+}
+
+nav a.selected, nav a:hover { /* nav a.selected is nav a tag with selected class. 
+	nav.a:hover is a sudo class that allows colors to change while the cursor is over the element */
+	color: #32673f;
+}

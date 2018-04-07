@@ -1,0 +1,86 @@
+/* 
+After main.css in html order
+Edits properties for quality on different screens.
+*/
+
+
+@media screen and (min-width: 480px) { /* Media querry: media type: screen, screen min-width: XXXpx
+This means the screen with change no screens ovey the min-width.
+For more information see: https://www.w3schools.com/cssref/css3_pr_mediaquery.asp */
+
+	/**********
+	TWO COLUMN LAYOUT (used in contact.html)
+	**********/
+
+	#primary {
+		width: 50%;
+		float: left;
+	}
+
+	#secondary {
+		width: 40%;
+		float: right;
+	}
+
+
+
+	/**********
+	PAGE: PORTFOLIO (turns the two colums to 3)
+	**********/
+
+	#gallery li {
+		width: 28.3333%;
+	}
+
+	#gallery li:nth-child(4n) { /* sudo class where we are clearing every forth list item */
+		clear: left;
+	}
+
+
+
+	/**********
+	PAGE: ABOUT (unstacks about page)
+	**********/
+
+	.profile-photo {
+		float: left;
+		margin: 0 5% 80px 0;
+	}
+}
+
+@media screen and (min-width: 660px) { /* Change layout when bigger screen, think tablets +  */
+
+	/**********
+	HEADER (rearanges the header, changes font sizes and adds a border)
+	**********/
+
+	nav {
+		background: none;
+		float: right;
+		font-size: 1.125em;
+		margin-right: 5%;
+		text-align: right;
+		width: 45%;
+	}
+
+	#logo {
+		float: left;
+		margin-left: 5%;
+		text-align: left;
+		width: 45%;
+	}
+
+	h1 {
+		font-size: 2.5em;
+	}
+
+	h2 {
+		font-size: 0.82em;
+		margin-bottom: 20px;
+	}
+
+	header {
+		border-bottom: 5px solid #599a68;
+		margin-bottom: 60px;
+	}
+}
